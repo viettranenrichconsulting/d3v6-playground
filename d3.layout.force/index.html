@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.js"></script>
+    <script src="force_label.js"></script>
+    <link href="index.css"  rel="stylesheet" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script> -->
+    <style>
+        .anchor {
+            fill: blue
+        }
+
+        .labelbox {
+            fill: black;
+            opacity: 0.8
+        }
+
+        .labeltext {
+            fill: white;
+            font-weight: bold;
+            text-anchor: middle;
+            font-size: 16;
+            font-family: serif
+        }
+
+        .link {
+            stroke: gray;
+            stroke-width: 0.35
+        }
+    </style>
+</head>
+<body>
+    <div style="width:150px;float:left">
+        <span id="corr-label">Correlation: </span><br>
+        <input type="range" min="-1.0" max="1.0" value="0.0" id="corr" step="0.01" />
+    </div>
+    <div style="width:150px;float:left">
+        <span id="charge-label">Label charge: </span><br>
+        <input type="range" min="0" max="100" value="60.0" id="charge" step="1" />
+    </div>
+    <button type="button" id="addone">Add one measurement</button>
+    <button type="button" id="randomize20">Replace with 20</button>
+    <button type="button" id="randomize50">Replace with 50</button>
+    <button type="button" id="randomize100">Replace with 100</button>
+
+    <script src="index.js"></script>
+</body>
+</html>
